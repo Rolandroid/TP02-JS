@@ -1,17 +1,16 @@
 
 
 let ObjetoFunciones = {
-    buscarTarea : function(target) {
-        target.reduce(function (acum, elemento, index){
-            if (elemento.titulo === process.argv[3]){
-                console.log("\nTarea encontrada\n------------------");
-                console.log((index + 1) + '_ ' +acum.titulo + ' - ' + acum.estado);
-            }
-            else if (elemento.titulo !== process.argv[3]){
-                console.log("Lo siento, elemento no encontrado " + 1)
-            }
-        })
-        console.log();
+    buscarTarea : function(target, index) {
+        let total = "";
+        for (let i = 0; i < target.length; i++) {
+            total = total + target[i].titulo+  " " + target[i].estado 
+        if (total.indexOf(process.argv[3]) !== -1){
+            console.log((i+1)+"_ "+ target[i].titulo +" "+ target[i].estado)
+            return
+        }
+    }
+        
     },
     eliminar: function (target) {
         if (process.argv[3]) {
