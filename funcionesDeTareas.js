@@ -1,7 +1,7 @@
 
 
 let ObjetoFunciones = {
-    buscarTarea : function(target, index) {
+    buscarTarea : function(target) {
         let total = "";
         for (let i = 0; i < target.length; i++) {
             total = total + target[i].titulo+  " " + target[i].estado 
@@ -9,7 +9,7 @@ let ObjetoFunciones = {
             console.log((i+1)+"_ "+ target[i].titulo +" "+ target[i].estado)
             return
         }
-    }
+    };
         
     },
     eliminar: function (target) {
