@@ -36,7 +36,7 @@ let ObjetoFunciones = {
         };
     },
     bienvenida: function () {
-        console.log('\nBienvenido. Podes listar , agregar, eliminar o buscar tareas. o filtrar las tareas segun su estado\n------------------');
+        console.log('\nBienvenido. Podes listar, agregar, eliminar o buscar tareas. o filtrar las tareas segun su estado\n------------------');
     },
     listar: function (target) {
         console.log('\nListado de tareas \n------------------')
