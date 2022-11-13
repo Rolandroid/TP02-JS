@@ -1,15 +1,21 @@
-
+//comentario de prueba
 
 let ObjetoFunciones = {
     buscarTarea : function(target) {
+        if (process.argv[3]){
         let total = "";
         for (let i = 0; i < target.length; i++) {
-            total = total + target[i].titulo+  " " + target[i].estado 
+            total = total + target[i].titulo 
         if (total.indexOf(process.argv[3]) !== -1){
+            console.log("\nTarea encontrada\n------------------")
             console.log((i+1)+"_ "+ target[i].titulo +" "+ target[i].estado)
             return
         }
-    };
+        }
+        }
+        else{
+            console.log("agrega una palabra clave para buscar entre las tareas")
+        }
         
     },
     eliminar: function (target) {
